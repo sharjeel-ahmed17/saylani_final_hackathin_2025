@@ -8,22 +8,20 @@ import UserRouter from './routers/users.router.js'
 import cookieParser from 'cookie-parser'
 
 const app = express()
-app.use(express.json()) //middleware
-app.use(cookieParser()) // For parsing cookie
-
+app.use(express.json()) 
+app.use(cookieParser()) 
 app.use(morgan("tiny"))
 app.use(cors({
-    origin: ["http://localhost:3000","https://saylani-phi.vercel.app"], // Allow your frontend URL..
-        methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
-        allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
-        credentials: true, // Allow cookies if needed
-
+    origin: ["http://localhost:3000","https://saylani-final-hackathin-2025.vercel.app"], 
+        methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+        allowedHeaders: ['Content-Type', 'Authorization'], 
+        credentials: true, 
 }))
 
 
 
 app.get('/', (req,res) => {
-    res.send("Hello world")
+    res.send("Hello world KIYA HAAL HAI DOSTOO")
 })
 
 dbConnect()

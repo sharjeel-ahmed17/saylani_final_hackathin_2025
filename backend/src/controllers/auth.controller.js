@@ -21,11 +21,10 @@ const RegisterController = async (req, res) => {
 
     // Generate OTP
     const otp = generateOTP();
-
-       const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000); // OTP expires in 5 minutes
+    const otpExpiresAt = new Date(Date.now() + 5 * 60 * 1000); // OTP expires in 5 minutes
 
     // Save user to the database
-    const user = new UserModel({ fullname, email, password: encyptPass, otp,otpExpiresAt, });
+    const user = new UserModel({ fullname, email, password: encyptPass, otp,otpExpiresAt });
     await user.save();
 
     // Send OTP email

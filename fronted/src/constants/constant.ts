@@ -1,6 +1,6 @@
 
-// const DEV_URL = `http://localhost:5000/`
-const PROD_URL = `https://backend-express-zeta.vercel.app`
+// const DEV_URL = process.env.DEV_URL
+const PROD_URL = process.env.PROD_URL
 
 
 export const BASE_URL = PROD_URL
